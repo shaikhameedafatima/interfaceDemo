@@ -1,0 +1,57 @@
+package com.valuemomentum.training.bookbasement;
+
+
+import java.util.Scanner;
+
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	Candidates c1=new Candidates();
+    	Skills s=new Skills();
+    	String city;
+		int cid;
+    	System.out.println("************** Global Tech Solutions **************");
+		System.out.println("----------- Candidate Management System ----------");
+		while(true)
+		{
+		System.out.println("1.New Candidate \t 2.Display Candidates");
+		System.out.println("3.Update Candidate \t 4.Delete Candidate");
+		System.out.println("5.Exit"); 
+			
+		Scanner s=new Scanner(System.in);
+		int option=s.nextInt();
+		
+		switch(option)
+		{
+		case 1: System.out.println("Enter Customer Name, City & Contact no :");
+		        String name=s.next();
+		        city=s.next();
+		        String contactno=s.next();
+			//c.insertCustomer(name,city,contactno);
+			break;
+		case 2: c1.dispCandidates();
+				break;
+		case 3: System.out.println("Enter CustomerId & City to be Updated:");
+        		cid=s.nextInt();
+        		city=s.next();
+			//c.updateCustomer(cid,city);
+			break;
+		case 4: System.out.println("Enter CustomerId  to be Deleted:");
+			cid=s.nextInt();
+			//c.deleteCustomer(cid);
+			break;
+		case 5: System.out.println("Program Terminated");
+		 	System.exit(0);
+		
+		default: System.out.println("Invalid Selection");
+		          break;
+		}
+		
+		
+    }
+    }
+}
+	
+}

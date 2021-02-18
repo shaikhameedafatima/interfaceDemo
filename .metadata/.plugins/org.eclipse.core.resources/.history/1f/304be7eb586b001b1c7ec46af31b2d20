@@ -1,0 +1,5 @@
+package com.valuemomentum.training.concurrency;
+
+public class YeildExample {
+
+}

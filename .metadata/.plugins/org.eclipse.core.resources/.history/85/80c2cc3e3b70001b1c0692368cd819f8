@@ -1,0 +1,25 @@
+package com.valuemomentum.training.jdbcdemo;
+
+import java.sql.Connection;
+import java.sql.Driver;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class MysqlCon 
+{
+	 public static void main( String[] args )
+	 {
+		 Connection con;
+		 Statement stmt;
+		 ResultSet rs;
+		 try {
+			 // register jdbc driver
+			 Class.forName("com.mysql.jdbc.driver");
+			 //open for connection
+			 System.out.println("connecting to database");
+			 con=DriverManager.getConnection("jdbc:mysql://localhost:3306/classicmodels","root","hameeda12");
+			 
+		 }
+		
+	 }
+}

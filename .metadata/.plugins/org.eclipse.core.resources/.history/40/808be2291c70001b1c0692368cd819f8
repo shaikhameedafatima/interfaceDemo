@@ -1,0 +1,28 @@
+package com.valuemomentum.training.testing.junitdemo;
+
+import org.junit.Test;
+import org.junit.runner.JUnitCore;
+
+public class SuitTest1 {
+
+	public String message = "Raj";							
+
+    JUnitCore junitMessage = new JUnitCore(message);							
+
+    @Test//(expected = ArithmeticException.class)	//j unit exception test				
+    public void testJUnitMessage() {					
+
+        System.out.println("Junit Message is printing ");					
+        JUnitCore.printMessage();			
+
+    }		
+
+    @Test		
+    public void testJUnitHiMessage() {					
+        message = "Hi!" + message;							
+        System.out.println("Junit Hi Message is printing ");					
+        assertEquals(message, JUnitCore.printHiMessage());					
+        System.out.println("Suite Test 1 is successful " + message);	
+
+}
+    }

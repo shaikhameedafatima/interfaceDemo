@@ -1,0 +1,5 @@
+package com.valuemomentum.training.bank.HelloMaven;
+
+public class Customer {
+
+}

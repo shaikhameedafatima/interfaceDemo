@@ -1,0 +1,43 @@
+
+class Car3
+{
+    //final will make sure engine is initialized
+    private final Engine3 engine3;  
+    String nameOfCar;
+    String model;
+    
+    public Car3(String nameOfCar, String model)
+    {
+       engine3  = new Engine3("POWERHIGH", "ABC");
+       this.nameOfCar = nameOfCar;
+       this.model = model;
+    }
+    
+    public void showAlldetails()
+    {
+        System.out.println("Name of Car ="+nameOfCar);
+        System.out.println("Name of Model ="+model);
+        System.out.println("Engine used in Car ="+engine3.typeOfEngine);
+        System.out.println("Engine name of Car ="+engine3.nameOfEngine);
+    }
+    
+}
+class Engine3
+{
+    String typeOfEngine;
+    String nameOfEngine;
+    
+    Engine3(String typeOfEngine, String nameOfEngine)
+    {
+        this.typeOfEngine = typeOfEngine;
+        this.nameOfEngine = nameOfEngine;
+    }
+}
+class ShowRoom
+{
+    public static void main(String arg[])
+    {
+        Car3 car = new Car3("BMW", "5X");
+        car.showAlldetails();
+    }
+}
